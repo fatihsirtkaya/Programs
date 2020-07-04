@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HepsiBurada
+﻿namespace HepsiBurada
 {
-   public interface ICalculate
+    public interface ICalculate
     {
         string CalculateFinalPosition(string position, string order);
     }

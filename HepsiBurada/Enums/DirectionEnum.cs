@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HepsiBurada.Enums
+﻿namespace HepsiBurada.Enums
 {
     public enum DirectionEnum
     {
