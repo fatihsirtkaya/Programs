@@ -7,13 +7,13 @@ using System.Text;
 
 namespace HepsiBurada
 {
-    public class Business : IBusiness
+    public class Calculate : ICalculate
     {
         //calculate Order Final Position
-        public string CalculateFinalPosition(string input)
+        public string CalculateFinalPosition(string position, string order)
         {
-            var rovers = getPosition(input.Split("\r\n").FirstOrDefault().Split(' '));
-            var Orders = getOrders(input.Split("\r\n").LastOrDefault());
+            var rovers = getPosition(position.Split(' '));
+            var Orders = getOrders(order);
 
             foreach (var item in Orders)
             {

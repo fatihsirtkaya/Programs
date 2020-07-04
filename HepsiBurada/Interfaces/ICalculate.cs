@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HepsiBurada
 {
-   public interface IBusiness
+   public interface ICalculate
     {
-        string CalculateFinalPosition(string input);
+        string CalculateFinalPosition(string position, string order);
     }
 }

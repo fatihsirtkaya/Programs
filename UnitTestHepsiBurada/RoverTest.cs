@@ -13,21 +13,21 @@ namespace UnitTestHepsiBurada
         public void TestMethod1()
         {
 
-            var mock = new Mock<IBusiness>();
-            mock.Setup(x => x.CalculateFinalPosition("1 2 N" + Environment.NewLine + "LMLMLMLMM")).Returns("1 3 N");
+            var mock = new Mock<ICalculate>();
+            mock.Setup(x => x.CalculateFinalPosition("1 2 N" , "LMLMLMLMM")).Returns("1 3 N");
 
-            IBusiness business = new Business();
-            Assert.AreEqual(business.CalculateFinalPosition("1 2 N" + Environment.NewLine + "LMLMLMLMM"), mock.Object.CalculateFinalPosition("1 2 N" + Environment.NewLine + "LMLMLMLMM"));
+            ICalculate business = new Calculate();
+            Assert.AreEqual(business.CalculateFinalPosition("1 2 N" , "LMLMLMLMM"), mock.Object.CalculateFinalPosition("1 2 N", "LMLMLMLMM"));
         }
 
         [TestMethod]
         public void TestMethod2()
         {
-            var mock = new Mock<IBusiness>();
-            mock.Setup(x => x.CalculateFinalPosition("3 3 E" + Environment.NewLine + "MMRMMRMRRM")).Returns("5 1 E");
+            var mock = new Mock<ICalculate>();
+            mock.Setup(x => x.CalculateFinalPosition("3 3 E" , "MMRMMRMRRM")).Returns("5 1 E");
 
-            IBusiness business = new Business();
-            Assert.AreEqual(business.CalculateFinalPosition("3 3 E" + Environment.NewLine + "MMRMMRMRRM"), mock.Object.CalculateFinalPosition("3 3 E" + Environment.NewLine + "MMRMMRMRRM"));
+            ICalculate business = new Calculate();
+            Assert.AreEqual(business.CalculateFinalPosition("3 3 E" , "MMRMMRMRRM"), mock.Object.CalculateFinalPosition("3 3 E" , "MMRMMRMRRM"));
 
         }
     }
